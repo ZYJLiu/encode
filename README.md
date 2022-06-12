@@ -16,6 +16,8 @@ Frontend (adapted from pointer.gg tutorial)
 Solana Pay QR code scanning requires HTTPS URL (using localhost:3000 won't scan)
 Tested with ngrok URL
 
+Both "merchant" (connected wallet) and "customer" (wallet scanning QR code) need to have a "Devnet USDC" token account from the mint below for transactions to work
+
 Get Devnet "USDC" from here
 https://spl-token-faucet.com/?token-name=USDC-Dev
 
