@@ -15,3 +15,8 @@ Frontend (adapted from pointer.gg tutorial)
 
 Solana Pay QR code scanning requires HTTPS URL (using localhost:3000 won't scan)
 Tested with ngrok URL
+
+Get Devnet "USDC" from here
+https://spl-token-faucet.com/?token-name=USDC-Dev
+
+Mint = Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr
