@@ -1,4 +1,4 @@
-Allows any merchant to create a loyalty points rewards program.
+Allows any merchant to create a loyalty points rewards program using Solana Pay transaction request QR code.
 
 Anchor Program
 
