@@ -5,6 +5,7 @@ import {
   Transaction,
   PublicKey,
 } from '@solana/web3.js'
+import { getMint, Mint } from '@solana/spl-token'
 import { FC, useCallback } from 'react'
 
 import { createCreateTokenRewardInstruction } from '../src/generated/instructions/createTokenReward'

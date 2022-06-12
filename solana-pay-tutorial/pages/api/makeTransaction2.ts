@@ -18,18 +18,15 @@ import {
   Keypair,
   PublicKey,
   Transaction,
-  sendAndConfirmTransaction,
 } from '@solana/web3.js'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { usdcAddress } from '../../lib/addresses'
 import calculatePrice from '../../lib/calculatePrice2'
 import calculateItem from '../../lib/calculatePrice3'
-import base58 from 'bs58'
 
 import idl from './token_rewards.json'
 
 import { createRedeemInstruction } from '../../src/generated/instructions/redeem'
-import { useConnection, useWallet } from '@solana/wallet-adapter-react'
 
 export type MakeTransactionInputData = {
   account: string

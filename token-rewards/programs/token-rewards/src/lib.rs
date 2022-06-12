@@ -47,10 +47,10 @@ pub mod token_rewards {
             },
         );
         token::transfer(cpi_ctx, usdc_token)?;
+        msg!("Transfer USDC to Merchant");
 
-        //TODO: safe math
         // mint or burn reward token
-        let reward_amount = usdc_token * ctx.accounts.reward_data.reward_basis_points / 10000;
+        let reward_amount = (ctx.accounts.reward_data.reward_basis_points.checked_mul(usdc_token).ok_or(ErrorCode::MATH)?).checked_div(10000).ok_or(ErrorCode::MATH)?;
 
         if reward_token > reward_amount {
             let cpi_ctx = CpiContext::new(
@@ -77,6 +77,7 @@ pub mod token_rewards {
 
             token::mint_to(cpi_ctx, reward_amount - reward_token)?;
         }
+        msg!("Mint Reward Token To Customer");
 
         Ok(())
     }       
