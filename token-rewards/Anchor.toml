@@ -1,13 +1,16 @@
 [features]
 seeds = false
 [programs.localnet]
-token_rewards = "2gLonWX3nv8oAy4DYeEfauhXJNjvRDEH1vUwvU8vCPWk"
+token_rewards = "DdV3ttvqbXm9uMW1XX5AUDkf7v9mgkQdFjNkrp4zkDyQ"
+
+[programs.devnet]
+token_rewards = "DdV3ttvqbXm9uMW1XX5AUDkf7v9mgkQdFjNkrp4zkDyQ"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "/home/johnliu/.config/solana/id.json"
 
 [scripts]

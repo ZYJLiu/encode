@@ -1,11 +1,11 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Mint, Token, TokenAccount,};
 
-declare_id!("2gLonWX3nv8oAy4DYeEfauhXJNjvRDEH1vUwvU8vCPWk");
+declare_id!("DdV3ttvqbXm9uMW1XX5AUDkf7v9mgkQdFjNkrp4zkDyQ");
 
 // Replace for Devnet Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr
 // Replace for Localnet 8fFnX9WSPjJEADtG5jQvQQptzfFmmjd6hrW7HjuUT8ur
-pub const USDC_MINT_ADDRESS: &str = "8fFnX9WSPjJEADtG5jQvQQptzfFmmjd6hrW7HjuUT8ur";
+pub const USDC_MINT_ADDRESS: &str = "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr";
 
 #[program]
 pub mod token_rewards {
