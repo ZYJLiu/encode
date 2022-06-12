@@ -1,0 +1,151 @@
+{
+  "version": "0.1.0",
+  "name": "token_rewards",
+  "instructions": [
+    {
+      "name": "createTokenReward",
+      "accounts": [
+        {
+          "name": "rewardData",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "rewardBasisPoints",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "redeem",
+      "accounts": [
+        {
+          "name": "rewardData",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "usdcMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "customerRewardToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "customerUsdcToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userUsdcToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "customer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "usdcToken",
+          "type": "u64"
+        },
+        {
+          "name": "rewardToken",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "TokenData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "publicKey"
+          },
+          {
+            "name": "rewardMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "rewardBump",
+            "type": "u8"
+          },
+          {
+            "name": "rewardBasisPoints",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "PDA",
+      "msg": "PDA not match"
+    },
+    {
+      "code": 6001,
+      "name": "MATH",
+      "msg": "Math Error"
+    }
+  ],
+  "metadata": {
+    "address": "DdV3ttvqbXm9uMW1XX5AUDkf7v9mgkQdFjNkrp4zkDyQ",
+    "origin": "anchor",
+    "binaryVersion": "0.24.2",
+    "libVersion": "0.24.2"
+  }
+}
